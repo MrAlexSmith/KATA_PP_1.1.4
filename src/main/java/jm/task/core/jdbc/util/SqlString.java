@@ -15,10 +15,10 @@ public final class SqlString {
         CREATE_USERS_TABLE_MySQL = """
                 CREATE TABLE IF NOT EXISTS users
                 (
-                    id       INT PRIMARY KEY AUTO_INCREMENT,
-                    name     VARCHAR(45) NOT NULL,
-                    lastName VARCHAR(45) NOT NULL,
-                    age      TINYINT     NOT NULL
+                    id        INT PRIMARY KEY AUTO_INCREMENT,
+                    name      VARCHAR(45) NOT NULL,
+                    last_name VARCHAR(45) NOT NULL,
+                    age       TINYINT     NOT NULL
                 )
                 """;
 
@@ -26,10 +26,10 @@ public final class SqlString {
         CREATE_USERS_TABLE_PostgreSQL = """
                 CREATE TABLE IF NOT EXISTS users
                 (
-                    id       BIGSERIAL   PRIMARY KEY,
-                    name     VARCHAR(45) NOT NULL,
-                    lastName VARCHAR(45) NOT NULL,
-                    age      SMALLINT    NOT NULL
+                    id        BIGSERIAL   PRIMARY KEY,
+                    name      VARCHAR(45) NOT NULL,
+                    last_name VARCHAR(45) NOT NULL,
+                    age       SMALLINT    NOT NULL
                 )
                 """;
 
@@ -39,7 +39,7 @@ public final class SqlString {
                 """;
         SAVE_USER_SQL = """
                 INSERT INTO users (
-                    name, lastName, age
+                    name, last_name, age
                 ) VALUES (?,?,?)
                 """;
         REMOVE_USER_BY_ID_SQL = """
@@ -50,7 +50,7 @@ public final class SqlString {
                 SELECT
                     id,
                     name,
-                    lastName,
+                    last_name,
                     age
                 FROM users
                 """;
