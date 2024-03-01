@@ -38,7 +38,8 @@ public final class SqlString {
                 DROP TABLE IF EXISTS users
                 """;
         SAVE_USER_SQL = """
-                INSERT INTO users (
+                INSERT INTO users
+                (
                     name, last_name, age
                 ) VALUES (?,?,?)
                 """;
