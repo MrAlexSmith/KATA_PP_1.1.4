@@ -16,6 +16,22 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\nUser{")
+                     .append("id=")
+                     .append(id)
+                     .append(" name='")
+                     .append(name)
+                     .append('\'')
+                     .append(" lastName='")
+                     .append(lastName)
+                     .append('\'')
+                     .append(" age=").append(age).append("}");
+        return stringBuilder.toString();
+    }
+
     public Long getId() {
         return id;
     }
@@ -46,21 +62,5 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nUser{")
-                     .append("id=")
-                     .append(id)
-                     .append(" name='")
-                     .append(name)
-                     .append('\'')
-                     .append(" lastName='")
-                     .append(lastName)
-                     .append('\'')
-                     .append(" age=").append(age).append("}");
-        return stringBuilder.toString();
     }
 }
