@@ -13,7 +13,8 @@ public final class Util {
     private Util() {
     }
 
-    public static Connection getConnection() throws SQLException, RuntimeException {
+    public static Connection getConnection()
+            throws SQLException, RuntimeException {
 
         return DriverManager.getConnection(
                 Property.get(URL_KEY),
